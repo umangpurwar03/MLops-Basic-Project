@@ -103,7 +103,7 @@ Let's break down our tests and what they do:
    - In the `test_model_performance` test, we evaluate our model's performance. We perform similar data preparation and model training as in the previous tests. After training, we make predictions both on the training and test data. Then, we calculate the mean squared error (MSE) for both sets of predictions. Finally, we determine if the model's performance is good, bad, or somewhere in between. The `self.assertTrue(test_mse >= train_mse)` line asserts that the test MSE is less than or equal to the train MSE.
 
 4. **Streamlit App Testing**:
-   - We've also added a new test, `test_streamlit_app`, for your Streamlit app. This test checks if your Streamlit app runs smoothly and loads without errors. This test can be run locally using the `testing.py` file. It ensures that your app is working as expected.
+   - We've also added a new test, **`testing.py`**, for your Streamlit app. This test checks if your Streamlit app runs smoothly and loads without errors. This test can be run locally using the `testing.py` file. It ensures that your app is working as expected.
 
 ### The Travis CI 
 
