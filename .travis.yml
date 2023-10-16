@@ -1,6 +1,6 @@
 language: python
 python:
-  - "3.8.10"  # Choose the Python version you want to test against
+  - "3.8"  # Choose the Python version you want to test against
 
 install:
   - pip install -r requirements.txt  # Install project dependencies
