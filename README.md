@@ -82,3 +82,51 @@ This command is like turning on the lights and opening the doors for our project
 
 Now, people can see our project. It's like telling your friends about your new shop. They can visit it by typing the AWS public IP address into their web browser:
 [**`http://13.213.202.48`**](http://13.213.202.48)
+
+# Automated Testing and CI/CD using Travis CI 
+
+## Running Tests with Travis CI
+
+Travis CI is like a watchful guardian for our code. Whenever we make changes and upload them here, Travis CI steps in to run these tests to make sure our code is in good shape.
+
+### Understanding Our Tests
+
+Let's break down our tests and what they do:
+
+1. **Testing Model Training**:
+   - This test, `test_train_model`, checks if we can train our machine learning model. We read movie data, select features, and ratings to use in training. After splitting the data into training and non-training parts, we train our model using the training data. This test ensures that our model is successfully trained and is not empty. The line `self.assertIsNotNone(model)` checks that the model is not None.
+
+2. **Testing Model Predictions**:
+   - The `test_make_predictions` test is all about checking if we can make predictions using our trained model. Just like before, we prepare our data and split it into training and non-training sections. We train the model again and then predict ratings on the training data. This test ensures that predictions are generated successfully, and they are not empty.
+
+3. **Assessing Model Performance**:
+   - In the `test_model_performance` test, we evaluate our model's performance. We perform similar data preparation and model training as in the previous tests. After training, we make predictions both on the training and test data. Then, we calculate the mean squared error (MSE) for both sets of predictions. Finally, we determine if the model's performance is good, bad, or somewhere in between. The `self.assertTrue(test_mse >= train_mse)` line asserts that the test MSE is less than or equal to the train MSE.
+
+4. **Streamlit App Testing**:
+   - We've also added a new test, `test_streamlit_app`, for your Streamlit app. This test checks if your Streamlit app runs smoothly and loads without errors. This test can be run locally using the `testing.py` file. It ensures that your app is working as expected.
+
+### The Travis CI 
+
+Travis CI is like our trusty assistant. To make all this happen, we have a special file called **`.travis.yml`. This file gives Travis CI instructions on which version of Python to use, how to set things up, and where to find the data for the tests. This way, we ensure our machine learning code stays in tip-top shape.
+
+### Checking Our Progress
+
+See that badge up there? It tells us whether the tests passed or not. Click on it to view the test results, kind of like looking at a report card for our code.
+
+### Test Results
+
+Travis CI keeps a record of all the tests it runs. You can check the details on the Travis CI website or by clicking the badge. This record helps us make sure our machine learning code is working as expected.
+
+If you have any questions or need assistance, please don't hesitate to reach out. You can start a chat or send us a message directly.
+
+## How to Get Started
+
+Interested in trying out our project on your computer? It's not as hard as it seems! Here's what you need to do:
+
+1. First, you need to grab a copy of our project and bring it to your computer. You can do that with this command:
+
+```bash
+git clone https://github.com/umangpurwar03/MLops-Basic-Project.git
+```
+
+This project is managed by **`Umang Purwar`**. You can contact us at [**`umangpurwar03@gmail.com`**](umangpurwar03@gmail.com).
