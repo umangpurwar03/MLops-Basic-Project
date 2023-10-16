@@ -5,14 +5,21 @@ from module import train_model, make_predictions
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
+import os
 
 # Let's create a class for our tests. We're gonna test some machine learning functions.
 class TestMachineLearning(unittest.TestCase):
 
     # First, we're gonna test if we can train the model. I think that's important.
     def test_train_model(self):
-        # Let's get some data from a CSV file. It's about movies, I guess.
-        data = pd.read_csv(r'data\Train.csv')
+    # Get the root directory of your project
+        project_root = os.path.dirname(os.path.abspath(__file__))
+
+        # Construct the path to your data file
+        data_file = os.path.join(project_root, 'data', 'Train.csv')
+
+        # Read the data from the constructed path
+        data = pd.read_csv(data_file)
 
         # We want to predict movie ratings, so we get some features and the ratings
         X = data[['gross', 'genre', 'budget']]
@@ -30,8 +37,14 @@ class TestMachineLearning(unittest.TestCase):
 
     # Next up, let's check if we can make predictions. I heard that's important in machine learning.
     def test_make_predictions(self):
-        # We're back to reading the movie data again. Repetition is key, I guess.
-        data = pd.read_csv(r'data\Train.csv')
+    # Get the root directory of your project
+        project_root = os.path.dirname(os.path.abspath(__file__))
+
+        # Construct the path to your data file
+        data_file = os.path.join(project_root, 'data', 'Train.csv')
+
+        # Read the data from the constructed path
+        data = pd.read_csv(data_file)
 
         # Same movie features and ratings, as always.
         X = data[['gross', 'genre', 'budget']]
@@ -51,8 +64,14 @@ class TestMachineLearning(unittest.TestCase):
 
     # Now, let's test the model's performance. Is it good, bad, or something in between?
     def test_model_performance(self):
-        # More movie data, but this time with single quotes. Python is picky.
-        data = pd.read_csv('data\Train.csv')
+    # Get the root directory of your project
+        project_root = os.path.dirname(os.path.abspath(__file__))
+
+        # Construct the path to your data file
+        data_file = os.path.join(project_root, 'data', 'Train.csv')
+
+        # Read the data from the constructed path
+        data = pd.read_csv(data_file)
 
         # We're still interested in movie features and ratings. Consistency is our middle name.
         X = data[['gross', 'genre', 'budget']]
