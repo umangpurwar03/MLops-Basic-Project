@@ -7,8 +7,9 @@ install:
 
 before_script:
   - git clone https://github.com/umangpurwar03/MLops-Basic-Project.git # Clone your GitHub repository
-  - mv MLops-Basic-Project/data data # Move the data directory into your project's root
-  # If the data directory has a different name, replace 'YourRepository' with the actual repository name
+  - mv MLops-Basic-Project/data data 
+  - ls -l  # List files and directories in the current directory
+  - ls -l data  
 
 script:
   - python -m unittest unit_test2 # Run your unit tests
