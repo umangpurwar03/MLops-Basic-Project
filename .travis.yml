@@ -1,0 +1,9 @@
+language: python
+python:
+  - "3.8.10"  # Choose the Python version you want to test against
+
+install:
+  - pip install -r requirements.txt  # Install project dependencies
+
+script:
+  - python -m unittest unit_test2  # Run your unit tests
