@@ -129,4 +129,4 @@ Interested in trying out our project on your computer? It's not as hard as it se
 git clone https://github.com/umangpurwar03/MLops-Basic-Project.git
 ```
 
-This project is managed by **`Umang Purwar`**. You can contact us at [**`umangpurwar03@gmail.com`**](umangpurwar03@gmail.com).
+This project is managed by **`Umang Purwar`**. You can contact me at [**`umangpurwar03@gmail.com`**](umangpurwar03@gmail.com).
